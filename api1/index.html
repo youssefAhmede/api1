@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-b">ecommerce</div>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <div class="search">
+            <input type="number" id="searchInputnumber" placeholder="min" value="">
+        </div>
+        <div class="search">
+            <input type="number" id="searchInputnumber2" placeholder="max" value="">
+        </div>
+        <div class="navbar-category">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+        <div class="navbar-category"><span>Sort by Price:</span>
+            <select id="sort" aria-placeholder="sort by price">
+                <option value="min">min price</option>
+                <option value="max">max price</option>
+            </select>
+        </div>
+        <div class="search">
+            <button onclick="doit()" id="submit" type="submit">Search</button>
+        </div>
+        <div class="search"></div>
+            <button onclick="showCart()" id="market">
+                <img id="market2" src="shopping.png" alt="market">
+                <span id="cart-count">0</span> 
+            </button>
+        </div>
+    </nav>
+
+    <section id="productsContainer" class="content"></section>
+
+
+
+    <div id="cart-modal" class="hidden">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="hideCart()">Close</button>
+    </div>
+
+   
+<!-- <div id="productModal" class="hidden modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="modalImage" src="" alt="Product Image">
+      <h3 id="modalTitle"></h3>
+      <p id="modalCategory"></p>
+      <p id="modalPrice"></p>
+    </div>
+  </div> -->
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
